@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+:root{
+
+--Moderate-violet: hsl(263, 55%, 52%);
+--Very-dark-grayish-blue: hsl(217, 19%, 35%);
+--Very-dark-blackish-blue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+--Light-gray: hsl(0, 0%, 81%);
+--Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Light-grayish-blue); 
+    font-family: 'Barlow Semi Condensed', sans-serif; 
+}
+
+.wrapper{
+
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+    "a a b c"
+    "d e e c" ;
+    gap: 1.5rem;
+    max-width: 70.375rem;   
+}
+
+.grid{
+    border-radius: 15px;
+    padding: 1.5em 2em;
+}
+.grid-card1 {
+    background-color: var(--Moderate-violet);
+    background-image: url(images/bg-pattern-quotation.svg);
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: 80% 0%;
+    grid-area: a;
+}
+
+.grid-card2{
+    background-color: var(--Very-dark-grayish-blue);
+    color: #fff;
+    grid-area: b;
+}
+
+.grid-card3{
+    background-color: var(--White);
+    color: var(--Very-dark-grayish-blue);
+    grid-area: d;
+}
+
+.grid-card4{
+    background-color: var(--Very-dark-blackish-blue);
+    color: #fff;
+    grid-area: e;
+}
+
+.grid-card5{
+    background-color: var(--White);
+    color: var(--Very-dark-grayish-blue);
+    grid-area: c;
+}
+
+
+.header{
+    display: flex;
+    padding-top: 0.75rem;
+    padding-bottom: 0.5rem;
+}
+
+.header img{
+    border-radius: 50%;
+    width: 40x;
+    height: 40px;
+    border: 1.5px solid transparent;
+}
+
+.header-text{
+    padding-left: 1rem;
+}
+.header-text p{
+    opacity: 0.5;
+    font-size: 0.75rem;
+}
+
+.header-text h2{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.text-section h1{
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.text-section p{
+    opacity: 0.7;
+    line-height: 1.2rem;
+    font-weight: normal;
+    font-size: 13px;
+    padding-top: 1rem;
+    font-weight: 500;
+}
+
+
+@media screen and (max-width: 60em ) {
+    .grid{
+        grid-template-areas: 
+        "a a b c"
+        "d e e c";
+    }   
+}
+
+@media screen and (max-width: 40em) {
+    .grid{
+        grid-template-areas: 
+        "a"
+        "a"
+        "a"
+        "b"
+        "d"
+        "e"
+        "e"
+        "c"
+        "c"
+        "c";
+    }
+    
+}
